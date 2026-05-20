@@ -15,5 +15,10 @@ def lambda_handler(event, context):
 
     city = "Moscow"
 
+    url = os.getenv('url')
+    response = urllib.request.urlopen(url)
+    data = json.loads(response.read())
+
+
 
 
