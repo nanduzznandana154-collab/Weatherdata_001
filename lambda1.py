@@ -8,3 +8,7 @@ import os
 dynamodb = boto3.resource('dynamodb')
 table = dynamodb.Table('weather_data_table')
 
+load_dotenv('.env')
+API_KEY = os.getenv('API_KEY')
+
+
