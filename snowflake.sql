@@ -3,3 +3,8 @@ use database weather_db;
 
 create schema weather_schema;
 use schema weather_schema;
+
+CREATE OR REPLACE TABLE weather_table (
+    data VARIANT
+);
+
