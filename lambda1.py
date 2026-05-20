@@ -11,4 +11,9 @@ table = dynamodb.Table('weather_data_table')
 load_dotenv('.env')
 API_KEY = os.getenv('API_KEY')
 
+def lambda_handler(event, context):
+
+    city = "Moscow"
+
+
 
