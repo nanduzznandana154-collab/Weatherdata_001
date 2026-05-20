@@ -20,6 +20,10 @@ def lambda_handler(event, context):
             Body=json.dumps(data)
         )
 
+        return {
+        'statusCode': 200
+    }
+
 
 
 
