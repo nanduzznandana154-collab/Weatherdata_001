@@ -30,6 +30,11 @@ def lambda_handler(event, context):
     }
     table.put_item(Item=item)
 
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Weather data stored successfully')
+    }
+
 
 
 
