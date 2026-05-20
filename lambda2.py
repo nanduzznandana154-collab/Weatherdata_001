@@ -8,3 +8,9 @@ BUCKET_NAME = 'weather-00000001456'
 
 def lambda_handler(event, context):
 
+    for record in event['Records']:
+
+        data = record['dynamodb']['NewImage']
+
+
+
