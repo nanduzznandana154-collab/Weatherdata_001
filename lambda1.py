@@ -19,6 +19,10 @@ def lambda_handler(event, context):
     response = urllib.request.urlopen(url)
     data = json.loads(response.read())
 
+    temperature = str(data['list'][0]['main']['temp'])
+    humidity = str(data['list'][0]['main']['humidity'])
+
+
 
 
 
