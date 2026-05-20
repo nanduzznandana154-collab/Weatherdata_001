@@ -28,6 +28,8 @@ def lambda_handler(event, context):
         'humidity': humidity,
         'timestamp': datetime.now().isoformat()
     }
+    table.put_item(Item=item)
+
 
 
 
