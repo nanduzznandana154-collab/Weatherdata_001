@@ -22,6 +22,14 @@ def lambda_handler(event, context):
     temperature = str(data['list'][0]['main']['temp'])
     humidity = str(data['list'][0]['main']['humidity'])
 
+    item = {
+        'city': data['city']['name'],
+        'temperature': temperature,
+        'humidity': humidity,
+        'timestamp': datetime.now().isoformat()
+    }
+
+
 
 
 
