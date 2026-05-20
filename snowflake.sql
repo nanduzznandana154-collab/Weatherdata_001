@@ -31,6 +31,11 @@ type='json'
 )
 on_error=continue;
 
+show pipes;
+
+SELECT * FROM weather_table;
+
+
 
 
 
