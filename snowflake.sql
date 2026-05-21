@@ -28,4 +28,14 @@ ls@weather_stage;
 CREATE OR REPLACE FILE FORMAT weather_json_format
 TYPE = 'JSON';
 
+create or replace pipe weather_pipe
+auto_ingest = TRUE
+as
+copy into weather_table
+from @weather_stage
+file_format=(
+type='json'
+)
+on_error=continue;
+
 
