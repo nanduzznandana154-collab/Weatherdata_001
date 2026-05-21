@@ -23,4 +23,9 @@ CREATE OR REPLACE STAGE weather_stage
 URL='s3://weather-00000001456/'
 STORAGE_INTEGRATION = s3_int;
 
+ls@weather_stage;
+
+CREATE OR REPLACE FILE FORMAT weather_json_format
+TYPE = 'JSON';
+
 
