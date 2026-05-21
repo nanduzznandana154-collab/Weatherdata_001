@@ -17,3 +17,10 @@ STORAGE_AWS_ROLE_ARN = os.getenv('STORAGE_AWS_ROLE_ARN')
 
 STORAGE_ALLOWED_LOCATIONS = ('s3://weather-00000001456/');
 
+desc integration s3_int;
+
+CREATE OR REPLACE STAGE weather_stage
+URL='s3://weather-00000001456/'
+STORAGE_INTEGRATION = s3_int;
+
+
